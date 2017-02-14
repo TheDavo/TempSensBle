@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">TempSensBle</string>
+    <string name="action_bluetooth">BLE Connect</string>
+    <string name="temp_heading">Temperature</string>
+    <string name="start_temp">00</string>
+    <string name="celsius"> Celsius</string>
+    <string name="scan_for_ble">Scan For BLE</string>
+    <string name="connect_to_ble">Connect to BLE</string>
+    <string name="enable_notifications">Enable Notif</string>
+    <string name="discover_services">Discover Services</string>
+
+</resources>

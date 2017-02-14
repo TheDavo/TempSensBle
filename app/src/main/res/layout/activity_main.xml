@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.eec136b.davit.tempsensble.MainActivity">
+
+
+
+    <!-- Adding the Android Toolbar -->
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <TextView
+        android:id="@+id/heading_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/temp_heading"
+        android:layout_below="@id/toolbar"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:id="@+id/scan_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/scan_for_ble"
+        android:enabled="false"
+        android:onClick="tempSenseScan"
+        android:layout_below="@id/heading_TV"/>
+    <Button
+        android:id="@+id/connect_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/connect_to_ble"
+        android:enabled="false"
+        android:onClick="tempSenseConnect"
+        android:layout_below="@id/scan_button"/>
+    <Button
+        android:id="@+id/discover_services_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/discover_services"
+        android:enabled="false"
+        android:onClick="discoverServices"
+        android:layout_below="@id/connect_button"/>
+    <Button
+        android:id="@+id/notifications_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/enable_notifications"
+        android:enabled="false"
+        android:onClick="enableNotif"
+        android:layout_below="@+id/discover_services_button"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/temp_sense_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start_temp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_below="@id/notifications_button"
+        android:textSize="20sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/temp_sense_TV"
+        android:layout_alignBaseline="@id/temp_sense_TV"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:text="@string/celsius"/>
+
+    <TextView
+        android:id="@+id/accel_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:text="X Y Z Data"
+        android:layout_below="@id/temp_sense_TV"/>
+
+    <TextView
+        android:id="@+id/heart_rate_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:text="heart rate"
+        android:layout_below="@id/accel_TV"/>
+
+    <TextView
+        android:id="@+id/sp02_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:text="sp02"
+        android:layout_below="@id/heart_rate_TV"/>
+    <TextView
+        android:id="@+id/battery_level_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:text="battery level"
+        android:layout_below="@id/sp02_TV"/>
+
+
+
+
+</RelativeLayout>
